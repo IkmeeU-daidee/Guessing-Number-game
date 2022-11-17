@@ -1,5 +1,10 @@
+#CreateGuessingNumberGameByPython
+#Start at 1 to 25
+
+print("Ready?")
+print ("Go!!")
 import random
-n = random.randrange(1,10)
+n = random.randrange(1,25)
 guess = int(input("Enter any number: "))
 while n!= guess:
     if guess < n:
