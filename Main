@@ -1,0 +1,14 @@
+print('Hello, Lets play guessingnumber game!')
+import random
+n = random.randrang(1,10)
+guess = int(input("Enter any number: "))
+while n!=guess: 
+  if guess < n:
+    print("Nope, Too low")
+    guess = ing(input("Enter mumber again: "))
+  elif guess > n:
+print("Nope, Too hight!")
+guess = int(input("Enter number again: "))
+  else:
+    break
+print("congrats, you won!!")
