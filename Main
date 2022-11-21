@@ -1,5 +1,10 @@
 #CreateGuessingNumberGameByPython
 #Start at 1 to 25
+"""
+Program: Guesing Number Game
+Author: Ikmee Udaidee
+Last date modified: 21 NOV 22
+"""
 
 print("Ready?")
 print ("Go!!")
