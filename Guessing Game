@@ -1,0 +1,33 @@
+#CreateGuessingNumberGameByPython
+#Start at 1 to 25
+"""
+Program: Guesing Number Game
+Author: Ikmee Udaidee
+Last date modified: 04 April 23
+"""
+
+import random
+
+class GuessingGame:
+    def __init__(self):
+        self.secret_number = random.randrange(1, 25)
+        self.guesses = 0
+    
+    def play(self):
+        print("Ready?")
+        input("Press Enter to start...")
+        print("Go!!")
+        while True:
+            self.guesses += 1
+            guess = int(input("Enter any number: "))
+            if guess < self.secret_number:
+                print("Too low")
+            elif guess > self.secret_number:
+                print("Too high!")
+            else:
+                print(f"You guessed it in {self.guesses} tries!")
+                break
+
+game = GuessingGame()
+game.play()
+
