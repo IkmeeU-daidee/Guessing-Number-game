@@ -6,18 +6,37 @@ Author: Ikmee Udaidee
 Last date modified: 21 NOV 22
 """
 
-print("Ready?")
-print ("Go!!")
 import random
-n = random.randrange(1,25)
-guess = int(input("Enter any number: "))
-while n!= guess:
-    if guess < n:
-        print("Too low")
-        guess = int(input("Enter number again: "))
-    elif guess > n:
-        print("Too high!")
-        guess = int(input("Enter number again: "))
-    else:
-      break
-print("You guess is right")
+
+class GuessingGame:
+    def __init__(self):
+        self.secret_number = random.randrange(1, 25)
+        self.guesses = 0
+    
+    def play(self):
+        print("Ready?")
+        input("Press Enter to start...")
+        print("Go!!")
+        while True:
+            self.guesses += 1
+            guess = int(input("Enter any number: "))
+            if guess < self.secret_number:
+                print("Too low")
+            elif guess > self.secret_number:
+                print("Too high!")
+            else:
+                print(f"You guessed it in {self.guesses} tries!")
+                self.play_again()
+                break
+                
+    def play_again(self):
+        play_again = input("Do you want to play again? (y/n) ")
+        if play_again == "y":
+            self.__init__()
+            self.play()
+        else:
+            print("Thanks for playing!")
+            
+game = GuessingGame()
+game.play()
+
